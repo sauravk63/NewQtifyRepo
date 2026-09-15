@@ -1,0 +1,236 @@
+.albumPageContainer {
+  padding: 40px 80px 140px 80px; /* Extra bottom padding for player */
+  min-height: 100vh;
+  background-color: var(--color-black);
+}
+
+.loading {
+  color: var(--color-white);
+  font-size: 24px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.backButtonContainer {
+  margin-bottom: 24px;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+}
+
+.backButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--color-white);
+}
+
+.albumHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+  margin-bottom: 48px;
+}
+
+.albumCoverImage {
+  width: 288px;
+  height: 288px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.albumDetails {
+  display: flex;
+  flex-direction: column;
+  color: var(--color-white);
+  padding-top: 16px;
+}
+
+.albumTitle {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.albumDescription {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.albumMetadata {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--color-white);
+  margin-top: 16px;
+}
+
+.dot {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.albumActions {
+  display: flex;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.shuffleButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.shuffleButton:hover {
+  opacity: 0.9;
+}
+
+.libraryButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--color-white);
+  border: 1px solid var(--color-primary);
+  border-radius: 24px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.libraryButton:hover {
+  background-color: rgba(52, 201, 75, 0.1);
+}
+
+.actionIcon {
+  font-size: 20px !important;
+}
+
+.songsSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.tableHeaderControls {
+  align-self: flex-end;
+  margin-bottom: 24px;
+}
+
+.songsTable {
+  width: 100%;
+  border-collapse: collapse;
+  color: var(--color-white);
+}
+
+.songsTable th {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.songsTable td {
+  padding: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.colTitle {
+  width: 50%;
+  text-align: left;
+}
+
+.colArtist {
+  width: 35%;
+  text-align: left;
+}
+
+.colDuration {
+  width: 15%;
+  text-align: left;
+}
+
+.songRow {
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.songRow:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.songTitleCell {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.songThumbnail {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.songNameText {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.artistNameText {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.durationText {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Custom MUI Pagination Styles */
+.customPagination :global(.MuiPaginationItem-root) {
+  color: var(--color-white) !important;
+  font-weight: 600 !important;
+}
+
+.customPagination :global(.MuiPaginationItem-root:hover) {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.customPagination :global(.MuiPaginationItem-root.Mui-selected) {
+  background-color: var(--color-primary) !important;
+  color: var(--color-white) !important;
+}
+
+.customPagination :global(.MuiPaginationItem-root.Mui-selected:hover) {
+  background-color: var(--color-primary) !important;
+  opacity: 0.9;
+}
+
+.customPagination :global(.MuiPaginationItem-ellipsis) {
+  color: rgba(255, 255, 255, 0.5) !important;
+}

@@ -1,0 +1,120 @@
+.playerContainer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px;
+  background-color: var(--color-black);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  z-index: 1000;
+}
+
+.songDetails {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex: 1;
+  min-width: 0; /* Ensures text truncation works if title is very long */
+}
+
+.songImage {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.songText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.songTitle {
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.songSubtitle {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 4px;
+}
+
+.controlsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 2;
+  max-width: 600px;
+}
+
+.playButton {
+  padding: 0 !important;
+  color: var(--color-white) !important;
+}
+
+.controlIcon {
+  font-size: 40px !important;
+  transition: transform 0.2s ease-in-out;
+}
+
+.controlIcon:hover {
+  transform: scale(1.1);
+}
+
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.timeLabel {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  min-width: 32px;
+}
+
+.progressSlider {
+  flex: 1;
+  padding: 13px 0 !important; /* Make track easier to click */
+}
+
+.progressSlider :global(.MuiSlider-track) {
+  background-color: var(--color-primary) !important;
+  border: none !important;
+}
+
+.progressSlider :global(.MuiSlider-rail) {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+  opacity: 1 !important;
+}
+
+.progressSlider :global(.MuiSlider-thumb) {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: var(--color-white) !important;
+}
+
+.progressSlider :global(.MuiSlider-thumb:hover),
+.progressSlider :global(.MuiSlider-thumb.Mui-focusVisible) {
+  box-shadow: 0px 0px 0px 8px rgba(52, 201, 75, 0.16) !important;
+}
+
+.rightSpacer {
+  flex: 1;
+}
